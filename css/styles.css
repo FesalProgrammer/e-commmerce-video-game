@@ -1,0 +1,661 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --fondo-oscuro: #1B1726;
+    --fondo-claro: #2A223A;
+
+    --color-primario:#FF5A2C;
+    --color-primario-oscuro:#cd3004 ;
+    --color-secundario:#1B1726 ;
+    --color-blanco:#ffffff ;
+
+    --fuente-primaria:'Lato', sans-serif ;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*ESTILOS HEADER PARA ESCRITORIO*/
+
+body{
+    font-family: var(--fuente-primaria);
+    background-color: var(--fondo-oscuro);
+    
+}
+
+.header {
+    margin-bottom: 100px;
+    background: linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/bg-inicio.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 125vh;
+    top: 0;
+    z-index: 10;
+    position: relative;
+
+    .navegacion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 135px;
+        padding: 1.5rem 0;
+
+        .anclaLogo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--color-primario);
+            margin-left: 40px;
+            
+        }
+
+        .listaNav {
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            .listaItem {
+                margin-right: 20px;
+                
+                .linkNav {
+                    color: var(--color-blanco);
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    padding: 0.5rem .8rem;
+                    transition: transform 0.3s;
+
+                    &:hover {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 10px;
+                        background-color: var(--color-primario);
+
+                    }
+                }
+            
+            }
+            li:last-child{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a{
+                    /* border: none; */
+                    /* border: 1px solid red;
+                    border-radius: 50%; */
+                    padding: 0.5rem;
+                    position: relative;
+                }
+                a:hover{
+                    border: 1px solid var(--color-blanco);
+                    border-radius: 50%;
+                    .count{
+                        color: var(--color-blanco);
+                        background-color: var(--color-primario);
+                        border: 1px solid var(--color-blanco);
+
+                    }
+                }
+                .count{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    font-size: 12px;
+                    color: var(--color-primario);
+                    background-color: var(--color-blanco);
+                    padding: 0 0.25rem;
+                    border: 1px solid --color-primario;
+                    border-radius: 50%;
+                }
+            }
+
+        }
+        .icon-cart{
+            width: 30px;
+            color: var(--color-primario);
+        }
+    }
+
+}
+.header-content{
+    display: flex;
+    
+}
+
+.header-txt h1{
+    font-size: 50px;
+    color: var(--color-blanco);
+    line-height: 1.2;
+    margin-left: 60px;
+    
+}
+
+.header-txt span{
+    color: var(--color-primario);
+}
+
+.header-txt p{
+    font-size: 17px;
+    color: var(--color-blanco);
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.img-del-juego{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.productos-titulo{
+    color: var(--color-blanco);
+    font-size: 35px;
+    margin-bottom: 90px;
+    text-align: center; 
+    width: 1500px;
+    
+}
+
+/*ESTILOS HEADER PARA MOBILE Y TABLET*/
+
+@media (max-width: 768px) {
+        .header {
+            min-height: 50vh;
+            margin-bottom: 20px;
+            .navegacion {
+                margin-left: -44px; 
+                padding-left: 80px;
+                margin-right: 60px;
+                flex-direction: column;
+                row-gap: 20px;
+
+                .anclaLogo {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    margin-right: 80px;
+                }
+
+                .listaNav {
+                    padding: initial;
+
+                    .listaItem {
+                        .linkNav {
+                            font-weight: 400;
+                            margin-right: initial;
+                            font-size: 1rem;
+                            padding: 0.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-txt h1{
+            font-size: 1.2rem;
+            margin-left: 0;
+            padding-left: 38px;
+        }
+        .header-txt p {
+            margin-left: 0;
+            font-size: 10px;
+            margin-top: 20px;
+            padding-left: 40px;
+            
+        }
+    }
+
+/*ESTILOS PARA MAIN ESCRITORIO*/
+.main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+
+.grid-productos-container{
+    display: grid;
+    width: 100%;
+    margin: auto;
+    margin-left: 0px;
+    justify-content: center;
+    line-height: 50px;
+    text-align: center;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 400px 400px 400px;
+    grid-gap: 50px;
+}
+.card{
+    background-color: var(--fondo-claro); 
+    border-radius: 15px;
+    box-shadow: 0 0 20PX rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 15px 5px var(--color-primario);
+    
+
+} 
+
+.img-del-juego{
+    border-radius: 15px;
+}
+
+.producto-txt{
+    padding: 10px 50px;
+}
+
+.producto-txt h3{
+    color: var(--color-blanco);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price p{
+    color: var(--color-primario);
+    font-size: 17px;
+}
+
+.price h3{
+    color: var(--color-blanco);
+    font-weight: 700px;
+} 
+
+.btn-comprar{
+    background-color: var(--color-primario);
+    font-weight: 700px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: var(--color-blanco);
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-comprar:hover{
+    background-color: var(--color-primario-oscuro);
+    transform: scale(1.1);
+}
+
+.tituloContacto{
+    font-size: 1.4rem;
+    color: var(--color-blanco);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* div form{
+    display: flex;
+    justify-content: center;
+} */
+
+form{
+    position: absolute;
+    left: 500px;
+    bottom: -270px;
+    background-color: var(--color-secundario);
+    /* margin-top: 0;
+    margin-bottom: 0px; */
+    /* padding: 40px 300px; */
+    min-height:75vh;
+    box-shadow: 0 0 20PX rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    /* border: 1px solid red; */
+}
+
+/* .input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+} */
+
+form .txtarea{
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    background-color: var(--color-secundario);
+    border: 3px solid var(--color-primario);
+    outline: none;
+    /* color: var(--fondo-claro); */
+    border: 2px solid var(--color-primario);
+    
+}
+
+input::placeholder, .txtarea::placeholder{
+    color: var(--color-blanco);
+}
+
+.btn {
+    padding: 17px 25px;
+    font-size: 1rem;
+    /* color: var(--color-blanco); */
+    border: 0;
+    border-radius: 25px;
+    background-color: var(--color-primario);
+    box-shadow: 0 0 20PX rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.5s, ease-in-out;
+    
+}
+
+.btn:hover{
+    background-color: var(--color-primario-oscuro);
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}    
+
+.tituloRegistrarse {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.seccionRegistrarse div {
+    margin-bottom: 5px;
+}
+
+.seccionRegistrarse input
+{
+    width: calc(100% - 20px);
+    padding: 5px 20px;
+    margin: 0 auto;
+    display: block;
+    border: 2px solid var(--color-primario);
+    border-radius: 20px;
+    
+} 
+
+#nombre,
+#apellido,
+#email,
+#message,
+#botonRegistrarse {
+    width: 75%;
+    color: var(--color-blanco);
+    background-color: var(--fondo-claro);
+
+}
+
+.error-text {
+    color: red;
+    font-size: 0.9em;
+    height: 1em;
+    margin-left: 55px;
+}
+
+#botonRegistrarse{
+    margin-top: 15px;
+    margin-bottom: 28px;
+    transition: all 0.3s ease-in-out;
+}
+#botonRegistrarse:hover{
+    transform: scale(1.1);
+    background-color: var(--color-primario-oscuro);
+
+}
+
+
+.limpiarCar {
+    display: flex;
+    justify-content: end;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-left: 22.3rem;
+    transition: all 0.3s ease-in-out;
+}
+    
+.limpiarCar:hover {
+    background-color: var(--color-primario-oscuro);
+    border: 1px solid var(--color-primario);
+    transform: scale(1.05);
+}
+.tableProduct {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 40rem;
+
+    .table {
+            thead {
+                background-color: var(--color-primario);
+                color: var(--color-blanco);
+    
+                tr th {
+                    border-radius: 10px;
+                    padding: 0.5rem;
+                }
+            }
+    
+            tbody {
+                background-color: var(--color-primario);
+                color: var(--color-blanco);
+                font-weight: 500;
+    
+                tr td {
+                    border: 3px solid var(--color-primario);
+                    border-radius: 10px;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    
+        p {
+            font-size: 1.2rem;
+            color: var(--color-blanco);
+            font-weight: 600;
+            margin-top: 1rem;
+            text-align: end;
+        }
+    }
+
+    .contenedorDetalle{
+        color: var(--color-blanco);
+        width:75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 60px;
+        img{
+            border-radius: 20px;
+        }
+        .textoDetalle{
+            h1{
+                font-size: 2.2rem;
+                font-weight: 700;
+            }
+            h2{
+                margin-top:20px;
+            }
+            .contenedorCreditos{
+                margin-top:20px;
+                display: flex;
+                justify-content:space-between;
+            }
+        }
+    }
+
+/*ESTILOS ESCRITORIO PARA EL FOOTER*/
+
+.footer {
+    margin-top: 15px;
+    color: var(--color-blanco);
+    height: 15vh;
+    min-width: 1100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .listaNav {
+        min-height: 100px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+
+        .listaItem {
+            margin-left: 20px;
+            
+            .linkNav {
+                text-decoration: none;
+                color: var(--color-blanco);
+                font-weight: 700;
+                font-size: 1rem;
+                padding-top: 15px;
+                padding-bottom: 16px;
+                .bi{
+                    text-align: center;
+                    font-size: 30px;
+                    margin: 25px;
+                    border-radius: 50%;
+                    padding: 5px 10px;
+                    color: var(--color-blanco);
+                    transition: box-shadow 0.3s ease-in-out;
+                }
+                .bi:hover{
+                        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+    
+    }
+
+    .flechaArriba {
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .about {
+        padding: 10px 15px;
+        border-radius: 28%;
+        background-color: var(--color-primario);
+        box-shadow: 0 0 20PX rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .about:hover {
+        background-color: var(--color-primario-oscuro);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .bi-whatsapp {
+        background-color: #157347;
+    }
+
+    .bi-facebook {
+        background-color: #0B5ED7;
+    }
+
+    .bi-twitter-x {
+        background-color: #5C636A;
+    }
+
+    .bi-instagram {
+        background-color: #DC3545;
+    }
+}
+
+/*ESTILOS PARA SECCION CARD PARA MOBILE Y TABLET*/
+
+@media (max-width: 768px) {
+    .container{
+        padding: 0 50px;
+    }
+    main section h2{
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 18px;
+        text-align: center;
+    
+    }
+    .grid-productos-container{
+        display: flex; 
+        flex-direction: column;
+        width: 18%;
+        margin-left: 618px;
+        vertical-align: middle;
+    }
+    .btn-comprar{
+        background-color: var(--color-primario);
+        padding: 2px 15px;
+    }
+}
+
+/*ESTILOS CONTACTO PARA MOBILE Y TABLET*/
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+
+    .form {
+        min-height: 40vh;
+        width: 270px;
+        margin-right: 40px;
+        margin-left: 40px;
+        margin-bottom: 20px;
+        padding: 45px 45px;
+    }
+}
+
+/*ESTILOS FOOTER CELULAR Y TABLET CHICA*/
+@media (max-width: 768px) {
+    .footer {
+        height: initial;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        margin-right: 115px;
+        margin-left: 28px;
+        .listaNav {
+            flex-direction: column;
+            row-gap: 30px;
+            .listaItem {
+                .linkNav {
+                    font-size: 1rem;
+                    padding: 17px 25px;
+                    margin-left: 72px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.tableProduct h2{
+    color: var(--color-blanco);
+    text-align: center;
+    margin-top: 0;
+}

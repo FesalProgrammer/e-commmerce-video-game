@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMMERCE-1.0</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./assets/img/fotoLogo.jpg">
+</head>
+<body>
+    <header id="header" class="header" data-aos="zoom-in" data-aos-duration="1000">
+        <nav class="navegacion">
+            <a class="anclaLogo" href="#">
+                Logo
+            </a>
+            <ul class="listaNav">
+                <li class="listaItem"><a class="linkNav" href="#">Inicio</a></li>
+                <li class="listaItem"><a class="linkNav" href="#main">Productos</a></li>
+                <li class="listaItem"><a class="linkNav" href="./pages/contacto.html">Contacto</a></li>
+                <li class="listaItem">
+                    <a href="./pages/productos.html" onclick="handleCart()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                            <path stroke-linecap="round"    stroke-linejoin="round"
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>
+                        <div class="count"></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1 class="header-content--titulo">Compra tu <span>juego</span><br>favorito aqui.</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing <br> elit. Exercitationem  porro praesentium velit deserunt <br> suscipit at cum quia id qui atque.  Nobis vel eveniet <br> at tenetur quidem ipsa quo nihil reprehenderit.
+                </p>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="main container">
+        <!-- Seccion productos -->
+        <section data-aos="zoom-in" data-aos-duration="1000" id="productos" class="productos">
+            <div class="productos-titulo">
+                <h2>Tus juegos favoritos</h2>
+            </div>
+            <div class="grid-productos-container">
+                <div class="card card-1">
+                    <a href="./pages/descripcionJgo1.html">
+                        <img src="./assets/img/l1.jpg" alt="foto juego 1" class="img-del-juego" loading="lazy">
+                        <div class="price">
+                            <h3>Juego 1</h3>
+                            <p>$900</p>
+                        </div>
+                    </a>
+                    <button class="btn-comprar">
+                        Añadir al carrito
+                    </button>
+                </div>
+                <div class="card card-2">
+                    <a href="./pages/descripcionJgo2.html">
+                        <img src="./assets/img/l2.jpg" alt="foto juego 2" class="img-del-juego" loading="lazy">
+                        <div class="price">
+                            <h3>Juego 2</h3>
+                            <p>$400</p>
+                        </div>
+                    </a>
+                    <button class="btn-comprar">
+                        Añadir al carrito
+                    </button>
+                </div>
+                <div class="card card-3">
+                    <a href="./pages/descripcionJgo3.html">
+                        <img src="./assets/img/l3.jpg" alt="foto juego 3" class="img-del-juego" loading="lazy">
+                        <div class="price">
+                            <h3>Juego 3</h3>
+                            <p>$100</p>
+                        </div>
+                    </a>
+                    <button class="btn-comprar">
+                        Añadir al carrito
+                    </button>
+                </div>
+                <div class="card card-4">
+                    <a href="./pages/descripcionJgo4.html">
+                        <img src="./assets/img/l4.jpg" alt="foto juego 4" class="img-del-juego" loading="lazy">
+                        <div class="price">
+                            <h3>Juego 4</h3>
+                            <p>$200</p>
+                        </div>
+                    </a>
+                    <button class="btn-comprar">
+                        Añadir al carrito
+                    </button>
+                </div>
+                <div class="card card-5">
+                    <a href="./pages/descripcionJgo5.html">
+                        <img src="./assets/img/l5.jpg" alt="foto juego 5" class="img-del-juego" loading="lazy">
+                        <div class="price">
+                            <h3>Juego 5</h3>
+                            <p>$500</p>
+                        </div>
+                    </a>
+                    <button class="btn-comprar">
+                        Añadir al carrito
+                    </button>
+                </div>
+                <div class="card card-6">
+                    <a href="./pages/descripcionJgo6.html">
+                        <img src="./assets/img/l6.jpg" alt="foto juego 6" class="img-del-juego" loading="lazy">
+                        <div class="price">
+                            <h3>Juego 6</h3>
+                            <p>$600</p>
+                        </div>
+                    </a>
+                    <button class="btn-comprar">
+                        Añadir al carrito
+                    </button>
+                </div>
+                <div class="card card-7">
+                    <a href="./pages/descripcionJgo7.html">
+                        <img src="./assets/img/l7.jpg" alt="foto juego 7" class="img-del-juego" loading="lazy">
+                        <div class="price">
+                            <h3>Juego 7</h3>
+                            <p>$900</p>
+                        </div>
+                    </a>
+                    <button class="btn-comprar">
+                        Añadir al carrito
+                    </button>
+                </div>
+                <div class="card card-8">
+                    <a href="./pages/descripcionJgo8.html">
+                        <img src="./assets/img/l8.jpg" alt="foto juego 8" class="img-del-juego" loading="lazy">
+                        <div class="price">
+                            <h3>Juego 8</h3>
+                            <p>$400</p>
+                        </div>
+                    </a>
+                    <button class="btn-comprar">
+                        Añadir al carrito
+                    </button>
+                </div>
+                <div class="card card-9">
+                    <a href="./pages/descripcionJgo9.html">
+                        <img src="./assets/img/l9.jpg" alt="foto juego 9" class="img-del-juego" loading="lazy">
+                        <div class="price">
+                            <h3>Juego 9</h3>
+                            <p>$700</p>
+                        </div>
+                    </a>
+                    <button class="btn-comprar">
+                        Añadir al carrito
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="navegacion">
+            <ul class="listaNav">
+                <li class="listaItem"><a class="linkNav about" href="#header">About us</a></li>
+                <li class="listaItem"><a class="linkNav" href="#header"><i class="bi bi-whatsapp"></i></a></li>
+                <li class="listaItem"><a class="linkNav" href="#header"><i class="bi bi-facebook"></i></a></li>
+                <li class="listaItem"><a class="linkNav" href="#header"><i class="bi bi-twitter-x"></i></a></li>
+                <li class="listaItem"><a class="linkNav" href="#header"><i class="bi bi-instagram"></i></a></li>
+            </ul>
+        </nav>
+        <a href="#header" class="flechaArriba">
+            <img src="./assets/img/flecha-hacia-arriba.png" alt="imagen de flecha ir hacia arriba">
+        </a>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
