@@ -1,5 +1,5 @@
 Título del proyecto: 
-E-Commerce
+E-Commerce curso Front-End JS
 
 Autor:
 Fesal La Rosa
